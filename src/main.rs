@@ -2,12 +2,20 @@
 
 use bevy::prelude::*;
 
+const PADDLE_SPEED: f32 = 50.0;
+
+#[derive(Component)]
+struct Paddle;
+
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
         .add_systems(Startup, setup)
+        .add_systems(FixedUpdate, move_paddle)
         .run();
 }
+
+
 
 /// set up a simple 3D scene
 fn setup(
@@ -28,6 +36,12 @@ fn setup(
         transform: Transform::from_xyz(0.0, 0.5, 0.0),
         ..default()
     });
+    commands.spawn(PbrBundle {
+        mesh: meshes.add(Mesh::from(shape::Cube { size: 1.0 })),
+        material: materials.add(Color::rgb(0.0, 0.7, 0.0).into()),
+        transform: Transform::from_xyz(1.0, 0.5, 0.0),
+        ..default()
+    });
     // light
     commands.spawn(PointLightBundle {
         point_light: PointLight {
@@ -39,8 +53,35 @@ fn setup(
         ..default()
     });
     // camera
-    commands.spawn(Camera3dBundle {
+    commands.spawn((Camera3dBundle {
         transform: Transform::from_xyz(-2.0, 2.5, 5.0).looking_at(Vec3::ZERO, Vec3::Y),
         ..default()
-    });
+    },
+    Paddle));
+}
+
+fn move_paddle(
+    keyboard_input: Res<Input<KeyCode>>,
+    mut query: Query<&mut Transform, With<Paddle>>,
+    time_step: Res<FixedTime>,
+) {
+    let mut paddle_transform = query.single_mut();
+    let mut direction = 0.0;
+
+    if keyboard_input.pressed(KeyCode::Left) {
+        direction -= 1.0;
+    }
+
+    if keyboard_input.pressed(KeyCode::Right) {
+        direction += 1.0;
+    }
+
+    // Calculate the new horizontal paddle position based on player input
+    let new_paddle_position =
+        paddle_transform.translation.x + direction * PADDLE_SPEED * time_step.period.as_secs_f32();
+
+    // Update the paddle position,
+    // making sure it doesn't cause the paddle to leave the arena
+
+    paddle_transform.translation.x = new_paddle_position;
 }
