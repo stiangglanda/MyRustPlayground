@@ -3,8 +3,7 @@ pub struct TicTacToe {
 }
 
 pub enum Outcome {
-    Player1Win,
-    Player2Win,
+    Win(String),
     Draw,
     None
 }
