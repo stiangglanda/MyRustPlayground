@@ -8,10 +8,9 @@
     <cargoProject FILE="$PROJECT_DIR$/BevyPlayground/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4cc62a6-bdc2-4395-8dbd-b4f3fcf99f85" name="Changes" comment="split up projects">
-      <change afterPath="$PROJECT_DIR$/BevyPlayground/index.html" afterDir="false" />
+    <list default="true" id="f4cc62a6-bdc2-4395-8dbd-b4f3fcf99f85" name="Changes" comment="played with rust and wasm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BevyPlayground/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/BevyPlayground/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe/src/tic_tac_toe.rs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/src/tic_tac_toe.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +43,9 @@
 }</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="ki8beui9" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -80,7 +82,7 @@
       <command value="cargo run" />
     </option>
   </component>
-  <component name="RunManager" selected="Cargo.Run RustProject [RustProject]">
+  <component name="RunManager" selected="Cargo.Run TicTacToe">
     <configuration name="Run RustProject [RustProject]" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="run --package RustProject --bin RustProject" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/BevyPlayground" />
@@ -187,9 +189,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Run TicTacToe" />
         <item itemvalue="Cargo.Run RustProject [RustProject]" />
         <item itemvalue="Cargo.Run TicTacToe [TicTacToe]" />
-        <item itemvalue="Cargo.Run TicTacToe" />
         <item itemvalue="Cargo.Run TicTacToe" />
         <item itemvalue="Cargo.run" />
       </list>
@@ -211,6 +213,10 @@
       <workItem from="1729190462298" duration="427000" />
       <workItem from="1729194997559" duration="1289000" />
       <workItem from="1729543940675" duration="1226000" />
+      <workItem from="1729545376842" duration="313000" />
+      <workItem from="1729619944530" duration="3295000" />
+      <workItem from="1730749222974" duration="2302000" />
+      <workItem from="1731002173949" duration="4737000" />
     </task>
     <task id="LOCAL-00001" summary="split up projects">
       <option name="closed" value="true" />
@@ -220,7 +226,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729020260490</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="played with rust and wasm">
+      <option name="closed" value="true" />
+      <created>1729545421408</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729545421408</updated>
+    </task>
+    <task id="LOCAL-00003" summary="played with rust and wasm">
+      <option name="closed" value="true" />
+      <created>1729545578031</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729545578031</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +261,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="split up projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="split up projects" />
+    <MESSAGE value="played with rust and wasm" />
+    <option name="LAST_COMMIT_MESSAGE" value="played with rust and wasm" />
   </component>
 </project>
